@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈少龙 - 个人作品集</title>
+    <!-- TailwindCSS 3.0+ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="w-full bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold text-lg">
+                    陈
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">陈少龙</h1>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">江西师范大学 软件学院 讲师</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">教育经历</a>
+                    <a href="#research" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">科研项目</a>
+                    <a href="#publications" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">学术成果</a>
+                    <a href="#patents" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">专利与软著</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-md transition-all duration-300">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors py-2">教育经历</a>
+                <a href="#research" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors py-2">科研项目</a>
+                <a href="#publications" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors py-2">学术成果</a>
+                <a href="#patents" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors py-2">专利与软著</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-primary-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-balance">陈少龙 <span class="text-primary-600 dark:text-primary-400">个人作品集</span></h1>
+                <p class="text-xl text-gray-700 dark:text-gray-300 mb-8 text-balance">江西师范大学软件学院讲师，专注于高性能计算、生物信息学和并行算法研究</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#education" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-graduation-cap mr-2"></i>查看教育背景
+                    </a>
+                    <a href="#publications" class="px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-book mr-2"></i>浏览学术成果
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Education Section -->
+        <section id="education" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-graduation-cap text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">教育经历</h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-400">西班牙巴塞罗那自治大学</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2014-10 至 2019-06</span>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">计算机科学与技术 博士</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-400">上海大学</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2011-09 至 2014-04</span>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">信息管理与电子商务 硕士</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-400">天津工程师范学院</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2007-09 至 2011-06</span>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">网络工程 学士</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-briefcase text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">工作经历</h2>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-400">江西师范大学 软件学院</h3>
+                        <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2019-10 至 今</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">讲师</p>
+                    <p class="text-gray-600 dark:text-gray-400">负责教学与科研工作，主要研究方向包括高性能计算、生物信息学和并行算法。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Projects Section -->
+        <section id="research" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-flask text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">科研项目</h2>
+            </div>
+            
+            <!-- National Projects -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">国家自然科学基金项目</h3>
+            <div class="grid gap-6 md:grid-cols-1 mb-8">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400">基于诊断报告及图像的X线胸片多粒度标注方法研究</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2023-01 至 2026-12</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">国家自然科学基金委员会 地区科学基金项目 (62262029)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">经费：33万元</span>
+                            <span class="text-gray-700 dark:text-gray-300">状态：在研</span>
+                            <span class="text-gray-700 dark:text-gray-300">角色：参与</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Projects -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">其他科研项目</h3>
+            <div class="grid gap-6 md:grid-cols-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400">面向众核结构的大规模生物序列比对并行算法研究</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2021-01 至 2024-12</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">江西省科技厅 江西省青年科学基金项目 (20212BAB212007)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">经费：10万元</span>
+                            <span class="text-gray-700 dark:text-gray-300">状态：在研</span>
+                            <span class="text-gray-700 dark:text-gray-300">角色：主持</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400">视觉显著性检测算法研究</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2021-01 至 2023-12</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">江西省教育厅 江西省教育厅科学技术研究面上项目 (GJJ200317)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">经费：2万元</span>
+                            <span class="text-gray-700 dark:text-gray-300">状态：结题</span>
+                            <span class="text-gray-700 dark:text-gray-300">角色：参与</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400">基于高性能计算结构的序列比对算法并行化研究</h3>
+                            <span class="text-sm bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full">2021-01 至 2022-12</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">江西省教育厅 江西省教育厅科学技术研究青年项目 (GJJ200332)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">经费：2万元</span>
+                            <span class="text-gray-700 dark:text-gray-300">状态：结题</span>
+                            <span class="text-gray-700 dark:text-gray-300">角色：主持</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-book text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">代表性学术成果</h2>
+            </div>
+            
+            <!-- Journal Papers -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">期刊论文</h3>
+            <div class="grid gap-6 md:grid-cols-1 mb-8">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">Optimizing Data Parallelism for FM-Based Short-Read Alignment on the Heterogeneous Non-Uniform Memory Access Architectures</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Shaolong Chen; Yunzi Dai; Liwei Liu; Xinting Yu</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">Future Internet, 2024, 16(6): 217-217</p>
+                        <div class="flex items-center">
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full mr-2">唯一第一作者</span>
+                            <span class="text-sm bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full">唯一通讯作者</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">Exploring Efficient Data Parallelism for Genome Read Mapping on Multicore and Manycore Architectures</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Shaolong Chen; Miquel Angel Senar</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">Parallel Computing, 2019, 87: 11-24</p>
+                        <div class="flex items-center">
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full mr-2">唯一第一作者</span>
+                            <span class="text-sm bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full">唯一通讯作者</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conference Papers -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">会议论文</h3>
+            <div class="grid gap-6 md:grid-cols-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">Optimization and Implementation Performance of Sequence Alignment on the Intel Xeon Phi-based Heterogeneous System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Shaolong Chen; Zhenzhen Luo; Wei Yang; Wenle Wang</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">The 3rd International Conference on Modeling, Simulation and Optimization Technologies and Applications, MSOTA 2020, Beijing, China, 2020-11-22至2020-11-23</p>
+                        <div class="flex items-center">
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full mr-2">唯一第一作者</span>
+                            <span class="text-sm bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full">唯一通讯作者</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">Improving Performance of Genomic Aligners on Intel Xeon Phi-Based Architectures</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Shaolong Chen; Miquel Angel Senar</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">2018 IEEE International Parallel and Distributed Processing Symposium Workshops, IPDPSW 2018, Vancouver, BC, Canada, 2018-5-21至2018-5-25</p>
+                        <div class="flex items-center">
+                            <span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full mr-2">唯一第一作者</span>
+                            <span class="text-sm bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full">唯一通讯作者</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patents and Software Section -->
+        <section id="patents" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-certificate text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">专利与软件著作权</h2>
+            </div>
+            
+            <!-- Patents -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">专利</h3>
+            <div class="grid gap-6 md:grid-cols-1 mb-8">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">一种区块链电力互联网用服务器的放置装置</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">陈少龙; 曹远龙; 杨伟; 罗勇; 罗珍珍</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">申请日期：2022-04-22</span>
+                            <span class="text-gray-700 dark:text-gray-300">专利号：CN202110104816.9</span>
+                            <span class="text-gray-700 dark:text-gray-300">国家：中国</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Software Copyrights -->
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">软件著作权</h3>
+            <div class="grid gap-6 md:grid-cols-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">基因序列比对数据分析软件v1.0</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">陈少龙</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">登记号：2023SR1316394</span>
+                            <span class="text-gray-700 dark:text-gray-300">取得方式：原始取得</span>
+                            <span class="text-gray-700 dark:text-gray-300">登记日期：2023-6-14</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">面向生物序列比对的高效并行计算软件v1.0</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">陈少龙</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">登记号：2020SR1598078</span>
+                            <span class="text-gray-700 dark:text-gray-300">取得方式：原始取得</span>
+                            <span class="text-gray-700 dark:text-gray-300">登记日期：2020-11-18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">基于区块链的生物特征信息计算分析系统v1.0</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">陈少龙</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 dark:text-gray-300">登记号：2021SR0346620</span>
+                            <span class="text-gray-700 dark:text-gray-300">取得方式：原始取得</span>
+                            <span class="text-gray-700 dark:text-gray-300">登记日期：2021-01-08</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Academic Activities Section -->
+        <section id="activities" class="mb-16 scroll-mt-20 animate-fade-in">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-users text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                <h2 class="text-2xl md:text-3xl font-bold">学术活动</h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-1">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">欧盟创新联盟第12届移动网络和管理国际学术会议(EAI MONAMI 2022)</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">2022-10-29 至 2022-10-30</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">江西师范大学软件学院</p>
+                        <p class="text-gray-700 dark:text-gray-300">角色：Track Chair</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-primary-700 dark:text-primary-400 mb-2">欧盟创新联盟第4届在线环境中的数据和信息学术会议(EAI DIONE 2023)</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">2023-12-9 至 2023-12-10</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">江西师范大学软件学院</p>
+                        <p class="text-gray-700 dark:text-gray-300">角色：Track Chair</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">关于作者</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">陈少龙，江西师范大学软件学院讲师，研究方向包括高性能计算、生物信息学和并行算法。</p>
+                    <p class="text-gray-600 dark:text-gray-400">BRID: 07675.00.51135</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">联系方式</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-envelope w-6 text-primary-600 dark:text-primary-400"></i>
+                            <span>shaolong.chen@jxnu.edu.cn</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-map-marker-alt w-6 text-primary-600 dark:text-primary-400"></i>
+                            <span>江西省南昌市紫阳大道99号</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">社交媒体</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://twitter.com/shaolongchen" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/shaolongchen" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shaolongchen" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+                <p class="text-gray-600 dark:text-gray-400">&copy; 2025 陈少龙. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Check for system preference and set initial theme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Add scroll animations
+        const sections = document.querySelectorAll('section');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        sections.forEach(section => {
+            section.classList.remove('animate-fade-in');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
